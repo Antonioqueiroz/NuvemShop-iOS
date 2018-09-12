@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		457F84748968F391C47522F0 /* Pods_TestNuvemShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709BE7161A2D04A4807120F4 /* Pods_TestNuvemShop.framework */; };
+		C7AF47E4214583DC00E2B873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF47E3214583DC00E2B873 /* AppDelegate.swift */; };
+		C7AF47E6214583DC00E2B873 /* ListTheCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF47E5214583DC00E2B873 /* ListTheCatsViewController.swift */; };
+		C7AF47E8214583DC00E2B873 /* ListTheDogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF47E7214583DC00E2B873 /* ListTheDogsViewController.swift */; };
+		C7AF47EB214583DC00E2B873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AF47E9214583DC00E2B873 /* Main.storyboard */; };
+		C7AF47ED214583FC00E2B873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AF47EC214583FC00E2B873 /* Assets.xcassets */; };
+		C7AF47F0214583FC00E2B873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AF47EE214583FC00E2B873 /* LaunchScreen.storyboard */; };
+		C7E570A72148862E00455CAD /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570A62148862E00455CAD /* Cat.swift */; };
+		C7E570A9214886D200455CAD /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570A8214886D200455CAD /* Dog.swift */; };
+		C7E570AB21488C4200455CAD /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570AA21488C4200455CAD /* ApiResponse.swift */; };
+		C7E570AD21488C7D00455CAD /* CatServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570AC21488C7D00455CAD /* CatServices.swift */; };
+		C7E570AF2148905800455CAD /* ListCatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570AE2148905800455CAD /* ListCatsPresenter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2341D26E20AA36E2254C97B5 /* Pods-TestNuvemShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNuvemShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop.debug.xcconfig"; sourceTree = "<group>"; };
+		709BE7161A2D04A4807120F4 /* Pods_TestNuvemShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestNuvemShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A795DB10576EDDE15ED8892 /* Pods-TestNuvemShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNuvemShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop.release.xcconfig"; sourceTree = "<group>"; };
+		C7AF47E0214583DC00E2B873 /* TestNuvemShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNuvemShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7AF47E3214583DC00E2B873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7AF47E5214583DC00E2B873 /* ListTheCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTheCatsViewController.swift; sourceTree = "<group>"; };
+		C7AF47E7214583DC00E2B873 /* ListTheDogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTheDogsViewController.swift; sourceTree = "<group>"; };
+		C7AF47EA214583DC00E2B873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7AF47EC214583FC00E2B873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7AF47EF214583FC00E2B873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7AF47F1214583FC00E2B873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7E570A62148862E00455CAD /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		C7E570A8214886D200455CAD /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		C7E570AA21488C4200455CAD /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		C7E570AC21488C7D00455CAD /* CatServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatServices.swift; sourceTree = "<group>"; };
+		C7E570AE2148905800455CAD /* ListCatsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCatsPresenter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7AF47DD214583DC00E2B873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457F84748968F391C47522F0 /* Pods_TestNuvemShop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A969D2E4935AB6E92B6D025D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2341D26E20AA36E2254C97B5 /* Pods-TestNuvemShop.debug.xcconfig */,
+				9A795DB10576EDDE15ED8892 /* Pods-TestNuvemShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7BC8551848FC1D28FA3D72B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				709BE7161A2D04A4807120F4 /* Pods_TestNuvemShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7AF47D7214583DB00E2B873 = {
+			isa = PBXGroup;
+			children = (
+				C7AF47E2214583DC00E2B873 /* TestNuvemShop */,
+				C7AF47E1214583DC00E2B873 /* Products */,
+				A969D2E4935AB6E92B6D025D /* Pods */,
+				B7BC8551848FC1D28FA3D72B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C7AF47E1214583DC00E2B873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF47E0214583DC00E2B873 /* TestNuvemShop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7AF47E2214583DC00E2B873 /* TestNuvemShop */ = {
+			isa = PBXGroup;
+			children = (
+				C7E570A32148860100455CAD /* Model */,
+				C7E570A52148860F00455CAD /* Services */,
+				C7E570A42148860D00455CAD /* Controller */,
+				C7AF47E3214583DC00E2B873 /* AppDelegate.swift */,
+				C7AF47E9214583DC00E2B873 /* Main.storyboard */,
+				C7AF47EC214583FC00E2B873 /* Assets.xcassets */,
+				C7AF47EE214583FC00E2B873 /* LaunchScreen.storyboard */,
+				C7AF47F1214583FC00E2B873 /* Info.plist */,
+			);
+			path = TestNuvemShop;
+			sourceTree = "<group>";
+		};
+		C7E5708D21487AC200455CAD /* CatsScene */ = {
+			isa = PBXGroup;
+			children = (
+				C7E5708F21487AED00455CAD /* ListCats */,
+			);
+			path = CatsScene;
+			sourceTree = "<group>";
+		};
+		C7E5708E21487AE000455CAD /* DogsScene */ = {
+			isa = PBXGroup;
+			children = (
+				C7E5709021487AF400455CAD /* ListDogs */,
+			);
+			path = DogsScene;
+			sourceTree = "<group>";
+		};
+		C7E5708F21487AED00455CAD /* ListCats */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF47E5214583DC00E2B873 /* ListTheCatsViewController.swift */,
+				C7E570AE2148905800455CAD /* ListCatsPresenter.swift */,
+			);
+			path = ListCats;
+			sourceTree = "<group>";
+		};
+		C7E5709021487AF400455CAD /* ListDogs */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF47E7214583DC00E2B873 /* ListTheDogsViewController.swift */,
+			);
+			path = ListDogs;
+			sourceTree = "<group>";
+		};
+		C7E570A32148860100455CAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7E570A62148862E00455CAD /* Cat.swift */,
+				C7E570A8214886D200455CAD /* Dog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7E570A42148860D00455CAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7E5708D21487AC200455CAD /* CatsScene */,
+				C7E5708E21487AE000455CAD /* DogsScene */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C7E570A52148860F00455CAD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C7E570AA21488C4200455CAD /* ApiResponse.swift */,
+				C7E570AC21488C7D00455CAD /* CatServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7AF47DF214583DC00E2B873 /* TestNuvemShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7AF47F4214583FC00E2B873 /* Build configuration list for PBXNativeTarget "TestNuvemShop" */;
+			buildPhases = (
+				9539C6767AC3D9FDDF5E4C10 /* [CP] Check Pods Manifest.lock */,
+				C7AF47DC214583DC00E2B873 /* Sources */,
+				C7AF47DD214583DC00E2B873 /* Frameworks */,
+				C7AF47DE214583DC00E2B873 /* Resources */,
+				FD873056E36A3F564AF8BF19 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestNuvemShop;
+			productName = TestNuvemShop;
+			productReference = C7AF47E0214583DC00E2B873 /* TestNuvemShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7AF47D8214583DB00E2B873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Antonio Queiroz";
+				TargetAttributes = {
+					C7AF47DF214583DC00E2B873 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = C7AF47DB214583DB00E2B873 /* Build configuration list for PBXProject "TestNuvemShop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7AF47D7214583DB00E2B873;
+			productRefGroup = C7AF47E1214583DC00E2B873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7AF47DF214583DC00E2B873 /* TestNuvemShop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7AF47DE214583DC00E2B873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7AF47F0214583FC00E2B873 /* LaunchScreen.storyboard in Resources */,
+				C7AF47ED214583FC00E2B873 /* Assets.xcassets in Resources */,
+				C7AF47EB214583DC00E2B873 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9539C6767AC3D9FDDF5E4C10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestNuvemShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD873056E36A3F564AF8BF19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7AF47DC214583DC00E2B873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E570A72148862E00455CAD /* Cat.swift in Sources */,
+				C7E570AF2148905800455CAD /* ListCatsPresenter.swift in Sources */,
+				C7E570AD21488C7D00455CAD /* CatServices.swift in Sources */,
+				C7AF47E8214583DC00E2B873 /* ListTheDogsViewController.swift in Sources */,
+				C7AF47E4214583DC00E2B873 /* AppDelegate.swift in Sources */,
+				C7E570AB21488C4200455CAD /* ApiResponse.swift in Sources */,
+				C7E570A9214886D200455CAD /* Dog.swift in Sources */,
+				C7AF47E6214583DC00E2B873 /* ListTheCatsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C7AF47E9214583DC00E2B873 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7AF47EA214583DC00E2B873 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7AF47EE214583FC00E2B873 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7AF47EF214583FC00E2B873 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7AF47F2214583FC00E2B873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7AF47F3214583FC00E2B873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7AF47F5214583FC00E2B873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2341D26E20AA36E2254C97B5 /* Pods-TestNuvemShop.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TestNuvemShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmdApps.TestNuvemShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7AF47F6214583FC00E2B873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A795DB10576EDDE15ED8892 /* Pods-TestNuvemShop.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TestNuvemShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmdApps.TestNuvemShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7AF47DB214583DB00E2B873 /* Build configuration list for PBXProject "TestNuvemShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7AF47F2214583FC00E2B873 /* Debug */,
+				C7AF47F3214583FC00E2B873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7AF47F4214583FC00E2B873 /* Build configuration list for PBXNativeTarget "TestNuvemShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7AF47F5214583FC00E2B873 /* Debug */,
+				C7AF47F6214583FC00E2B873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7AF47D8214583DB00E2B873 /* Project object */;
+}
