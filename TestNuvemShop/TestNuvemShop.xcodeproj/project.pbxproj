@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		457F84748968F391C47522F0 /* Pods_TestNuvemShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709BE7161A2D04A4807120F4 /* Pods_TestNuvemShop.framework */; };
+		C79C7AAB2149FE7C004E3D28 /* DetailsOfCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79C7AAA2149FE7C004E3D28 /* DetailsOfCatsViewController.swift */; };
 		C7AF47E4214583DC00E2B873 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF47E3214583DC00E2B873 /* AppDelegate.swift */; };
 		C7AF47E6214583DC00E2B873 /* ListTheCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF47E5214583DC00E2B873 /* ListTheCatsViewController.swift */; };
 		C7AF47E8214583DC00E2B873 /* ListTheDogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AF47E7214583DC00E2B873 /* ListTheDogsViewController.swift */; };
@@ -26,6 +27,7 @@
 		2341D26E20AA36E2254C97B5 /* Pods-TestNuvemShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNuvemShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop.debug.xcconfig"; sourceTree = "<group>"; };
 		709BE7161A2D04A4807120F4 /* Pods_TestNuvemShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestNuvemShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A795DB10576EDDE15ED8892 /* Pods-TestNuvemShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestNuvemShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop.release.xcconfig"; sourceTree = "<group>"; };
+		C79C7AAA2149FE7C004E3D28 /* DetailsOfCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsOfCatsViewController.swift; sourceTree = "<group>"; };
 		C7AF47E0214583DC00E2B873 /* TestNuvemShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestNuvemShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7AF47E3214583DC00E2B873 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7AF47E5214583DC00E2B873 /* ListTheCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTheCatsViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 				709BE7161A2D04A4807120F4 /* Pods_TestNuvemShop.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C79C7AA92149FE46004E3D28 /* DetailsCats */ = {
+			isa = PBXGroup;
+			children = (
+				C79C7AAA2149FE7C004E3D28 /* DetailsOfCatsViewController.swift */,
+			);
+			path = DetailsCats;
 			sourceTree = "<group>";
 		};
 		C7AF47D7214583DB00E2B873 = {
@@ -115,6 +125,7 @@
 		C7E5708D21487AC200455CAD /* CatsScene */ = {
 			isa = PBXGroup;
 			children = (
+				C79C7AA92149FE46004E3D28 /* DetailsCats */,
 				C7E5708F21487AED00455CAD /* ListCats */,
 			);
 			path = CatsScene;
@@ -270,6 +281,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -277,6 +289,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E570A72148862E00455CAD /* Cat.swift in Sources */,
+				C79C7AAB2149FE7C004E3D28 /* DetailsOfCatsViewController.swift in Sources */,
 				C7E570AF2148905800455CAD /* ListCatsPresenter.swift in Sources */,
 				C7E570AD21488C7D00455CAD /* CatServices.swift in Sources */,
 				C7AF47E8214583DC00E2B873 /* ListTheDogsViewController.swift in Sources */,

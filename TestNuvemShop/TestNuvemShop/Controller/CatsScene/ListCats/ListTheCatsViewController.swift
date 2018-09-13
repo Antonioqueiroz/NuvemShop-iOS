@@ -12,12 +12,10 @@ import Kingfisher
 
 class ListTheCatsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var hud: MBProgressHUD = MBProgressHUD()
     var presenter : ListCatsPresenter = ListCatsPresenter()
     var cats : [Cat] = [Cat]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Cats"
         presenter.showInView(view: self)
         presenter.getCats()
     }
@@ -31,17 +29,18 @@ class ListTheCatsViewController: UIViewController {
 
 extension ListTheCatsViewController : ListCatsView {
     func showListCats(listCats: [Cat]) {
-        print("Cats \(listCats)")
+        self.cats = listCats
+        self.collectionView .reloadData()
     }
     
     func showLoadingWithMessage(message: String) {
-        hud.show(animated: true)
-        self.hud.mode = MBProgressHUDMode.indeterminate
-        self.hud.label.text = message
+        let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
+        loadingNotification.mode = MBProgressHUDMode.indeterminate
+        loadingNotification.label.text = "Carregando.."
     }
     
     func hideLoading() {
-        self.hud.hide(animated: true)
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
     func showFailMessage(message: String) {
