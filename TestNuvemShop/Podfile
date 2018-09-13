@@ -9,6 +9,7 @@ target 'TestNuvemShop' do
   pod 'MBProgressHUD'
   pod 'Alamofire'
   pod 'SwiftyJSON', '~> 4.0'
-  
+  pod 'Kingfisher'
+  pod 'SCLAlertView'
 
 end

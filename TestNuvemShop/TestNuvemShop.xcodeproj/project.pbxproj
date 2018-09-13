@@ -14,6 +14,7 @@
 		C7AF47EB214583DC00E2B873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AF47E9214583DC00E2B873 /* Main.storyboard */; };
 		C7AF47ED214583FC00E2B873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AF47EC214583FC00E2B873 /* Assets.xcassets */; };
 		C7AF47F0214583FC00E2B873 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7AF47EE214583FC00E2B873 /* LaunchScreen.storyboard */; };
+		C7C7556E2149D33500BF3B0C /* CatsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7556C2149D33500BF3B0C /* CatsCollectionViewCell.swift */; };
 		C7E570A72148862E00455CAD /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570A62148862E00455CAD /* Cat.swift */; };
 		C7E570A9214886D200455CAD /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570A8214886D200455CAD /* Dog.swift */; };
 		C7E570AB21488C4200455CAD /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E570AA21488C4200455CAD /* ApiResponse.swift */; };
@@ -33,6 +34,7 @@
 		C7AF47EC214583FC00E2B873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7AF47EF214583FC00E2B873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7AF47F1214583FC00E2B873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7C7556C2149D33500BF3B0C /* CatsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7E570A62148862E00455CAD /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		C7E570A8214886D200455CAD /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		C7E570AA21488C4200455CAD /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 			path = TestNuvemShop;
 			sourceTree = "<group>";
 		};
+		C7C755632149CEDD00BF3B0C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C7C7556C2149D33500BF3B0C /* CatsCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C7E5708D21487AC200455CAD /* CatsScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 		C7E5708F21487AED00455CAD /* ListCats */ = {
 			isa = PBXGroup;
 			children = (
+				C7C755632149CEDD00BF3B0C /* Cell */,
 				C7AF47E5214583DC00E2B873 /* ListTheCatsViewController.swift */,
 				C7E570AE2148905800455CAD /* ListCatsPresenter.swift */,
 			);
@@ -257,12 +268,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestNuvemShop/Pods-TestNuvemShop-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -284,6 +297,7 @@
 				C7AF47E8214583DC00E2B873 /* ListTheDogsViewController.swift in Sources */,
 				C7AF47E4214583DC00E2B873 /* AppDelegate.swift in Sources */,
 				C7E570AB21488C4200455CAD /* ApiResponse.swift in Sources */,
+				C7C7556E2149D33500BF3B0C /* CatsCollectionViewCell.swift in Sources */,
 				C7E570A9214886D200455CAD /* Dog.swift in Sources */,
 				C7AF47E6214583DC00E2B873 /* ListTheCatsViewController.swift in Sources */,
 			);
@@ -431,8 +445,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNP2295J25;
 				INFOPLIST_FILE = TestNuvemShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +454,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmdApps.TestNuvemShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,8 +467,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNP2295J25;
 				INFOPLIST_FILE = TestNuvemShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
