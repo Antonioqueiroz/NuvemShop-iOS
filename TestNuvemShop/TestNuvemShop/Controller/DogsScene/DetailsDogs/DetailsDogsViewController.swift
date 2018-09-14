@@ -32,7 +32,7 @@ class DetailsOfDogsViewController: UIViewController {
             self.labelHeigth.text = ("Heigth - \(breed?.heigthMetric ?? "")")
             self.labelWeigth.text = ("Weigth - \(breed?.weigthMetric ?? "")")
             self.labelBreedGroup.text = ("Breed Group - \(breed?.breed_group ?? "")")
-            self.labelLife_span.text = ("Life Span - \(breed?.name ?? "")")
+            self.labelLife_span.text = ("Life Span - \(breed?.life_span ?? "")")
         }else{
             self.stackView.isHidden = true
             self.labelNoBreed.isHidden = false
