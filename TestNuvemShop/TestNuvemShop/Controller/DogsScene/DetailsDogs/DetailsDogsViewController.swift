@@ -1,15 +1,15 @@
 //
-//  DetailsOfCatsViewController.swift
+//  DetailsDogsViewController.swift
 //  TestNuvemShop
 //
-//  Created by Antonio Queiroz on 12/09/2018.
+//  Created by Antonio Queiroz on 13/09/2018.
 //  Copyright © 2018 Antonio Queiroz. All rights reserved.
 //
 
 import UIKit
 import Kingfisher
 
-class DetailsOfCatsViewController: UIViewController {
+class DetailsOfDogsViewController: UIViewController {
     var urlStringImage : String? = ""
     var stringBreeds : String? = ""
     var breed : Breed?
@@ -39,7 +39,7 @@ class DetailsOfCatsViewController: UIViewController {
             self.labelNoBreed.text = "Undefined Breed"
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

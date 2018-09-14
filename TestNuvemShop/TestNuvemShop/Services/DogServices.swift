@@ -1,8 +1,8 @@
 //
-//  CatServices.swift
+//  DogServices.swift
 //  TestNuvemShop
 //
-//  Created by Antonio Queiroz on 11/09/2018.
+//  Created by Antonio Queiroz on 13/09/2018.
 //  Copyright © 2018 Antonio Queiroz. All rights reserved.
 //
 
@@ -11,28 +11,28 @@ import Alamofire
 import SwiftyJSON
 
 
-class CatServices{
-    var BaseUrlCats : String = "https://api.thecatapi.com/v1/images/search/?limit=50"
+class DogServices{
+    var BaseUrlDogs : String = "https://api.thedogapi.com/v1/images/search/?limit=50"
     
-    func getCats(completion: @escaping (_ result: RequestResult<[Cat]>)-> Void){
-        if let url = URL(string: BaseUrlCats) {
+    func getDogs(completion: @escaping (_ result: RequestResult<[Dog]>)-> Void){
+        if let url = URL(string: BaseUrlDogs) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             
-            urlRequest.addValue("403337ee-e21f-416c-a410-109fc39eb97b", forHTTPHeaderField: "x-api-key")
+            urlRequest.addValue("438263ad-21e0-4db0-93e6-b066593dbc16", forHTTPHeaderField: "x-api-key")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Content_Type")
             
             Alamofire.request(urlRequest).responseJSON { (response) in
                 if let result = response.result.value {
                     let json = JSON(result)
                     print("Response:\(json)")
-                    var listCats = [Cat]()
-                    let cats = json.arrayValue
-                    for cat in cats{
-                        let data = Cat(withJson: cat)
-                        listCats.append(data)
+                    var listDogs = [Dog]()
+                    let dogs = json.arrayValue
+                    for dog in dogs{
+                        let data = Dog(withJson: dog)
+                        listDogs.append(data)
                     }
-                    completion(RequestResult.done(listCats))
+                    completion(RequestResult.done(listDogs))
                 }else{
                     completion(RequestResult.failed(message: "Error to load data..."))
                 }

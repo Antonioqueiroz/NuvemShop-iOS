@@ -9,11 +9,15 @@
 import UIKit
 import MBProgressHUD
 import Kingfisher
+import SCLAlertView
 
 class ListTheCatsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var presenter : ListCatsPresenter = ListCatsPresenter()
     var cats : [Cat] = [Cat]()
+    var imageUrlSelected : String = ""
+    var breedSelected : Breed?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.showInView(view: self)
@@ -23,8 +27,12 @@ class ListTheCatsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! DetailsOfCatsViewController
+        vc.urlStringImage = self.imageUrlSelected
+        vc.breed = self.breedSelected
+    }
 }
 
 extension ListTheCatsViewController : ListCatsView {
@@ -36,7 +44,7 @@ extension ListTheCatsViewController : ListCatsView {
     func showLoadingWithMessage(message: String) {
         let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
         loadingNotification.mode = MBProgressHUDMode.indeterminate
-        loadingNotification.label.text = "Carregando.."
+        loadingNotification.label.text = message
     }
     
     func hideLoading() {
@@ -44,7 +52,7 @@ extension ListTheCatsViewController : ListCatsView {
     }
     
     func showFailMessage(message: String) {
-        
+        SCLAlertView().showError("Error", subTitle:message)
     }
 }
 
@@ -66,12 +74,15 @@ extension ListTheCatsViewController : UICollectionViewDataSource{
 }
 
 extension ListTheCatsViewController : UICollectionViewDelegate{
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cat = self.cats[indexPath.row]
-        
-//        let carDetail = CarDetailVC()
-//        carDetail.car = car
-//        self.navigationController?.pushViewController(carDetail, animated: true)
+        self.imageUrlSelected = cat.imageUrl
+        if (!cat.breeds.isEmpty){
+            self.breedSelected = cat.breeds.first!
+        }else{
+            self.breedSelected = nil
+        }
+        self.performSegue(withIdentifier: "catsDetails", sender: self)
     }
 }
 

@@ -11,8 +11,14 @@ import SwiftyJSON
 
 class Cat{
     var imageUrl : String
+    var breeds: [Breed] = []
     
     init(withJson data: JSON) {
         self.imageUrl = data["url"].stringValue
+        let arrayBreeds = data["breeds"].arrayValue
+        for breed in arrayBreeds{
+            let data = Breed(withJson: breed)
+            breeds.append(data)
+        }
     }
 }
