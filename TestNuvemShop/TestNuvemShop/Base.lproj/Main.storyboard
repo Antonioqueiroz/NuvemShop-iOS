@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +31,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="catsCell" id="pTC-1m-KE3" customClass="CatsCollectionViewCell" customModule="TestNuvemShop" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pTC-1m-KE3" customClass="AnimalsCollectionViewCell" customModule="TestNuvemShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="105"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -83,17 +82,17 @@
                     <connections>
                         <outlet property="collectionView" destination="QBV-Dp-h3y" id="ojX-Tk-pa7"/>
                         <outlet property="view" destination="tsR-hK-woN" id="eAr-nO-Otd"/>
-                        <segue destination="DnO-Ih-wBJ" kind="show" identifier="catsDetails" id="2u7-td-Kbs"/>
+                        <segue destination="DnO-Ih-wBJ" kind="show" identifier="catsDetail" id="18a-bX-d4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1574" y="-339"/>
         </scene>
-        <!--Details of Cat-->
+        <!--Details-->
         <scene sceneID="6y3-bu-hlY">
             <objects>
-                <viewController title="Details of Cat" id="DnO-Ih-wBJ" customClass="DetailsOfCatsViewController" customModule="TestNuvemShop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Details" id="DnO-Ih-wBJ" customClass="AnimalDetailViewController" customModule="TestNuvemShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KKa-6o-s64">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,15 +103,6 @@
                                     <constraint firstAttribute="height" constant="220" id="L5T-fO-Jfx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Undefined Breed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqo-4R-Q5z">
-                                <rect key="frame" x="30" y="260" width="315" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="VM9-e8-Lbb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1KZ-ky-CTb">
                                 <rect key="frame" x="30" y="260" width="315" height="140"/>
                                 <subviews>
@@ -155,31 +145,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dri-4n-88K" firstAttribute="leading" secondItem="X2E-Yu-9sG" secondAttribute="leading" constant="30" id="F6h-8p-ImS"/>
-                            <constraint firstItem="lqo-4R-Q5z" firstAttribute="top" secondItem="dri-4n-88K" secondAttribute="bottom" constant="20" id="FdO-1l-6vv"/>
                             <constraint firstItem="X2E-Yu-9sG" firstAttribute="trailing" secondItem="1KZ-ky-CTb" secondAttribute="trailing" constant="30" id="Jtz-hJ-vKZ"/>
-                            <constraint firstItem="X2E-Yu-9sG" firstAttribute="trailing" secondItem="lqo-4R-Q5z" secondAttribute="trailing" constant="30" id="LKl-pa-SUv"/>
                             <constraint firstItem="dri-4n-88K" firstAttribute="top" secondItem="X2E-Yu-9sG" secondAttribute="top" constant="20" id="aNC-FM-3W7"/>
                             <constraint firstItem="1KZ-ky-CTb" firstAttribute="leading" secondItem="X2E-Yu-9sG" secondAttribute="leading" constant="30" id="fbR-hA-wT1"/>
-                            <constraint firstItem="lqo-4R-Q5z" firstAttribute="leading" secondItem="X2E-Yu-9sG" secondAttribute="leading" constant="30" id="mHp-xs-rc9"/>
                             <constraint firstItem="X2E-Yu-9sG" firstAttribute="trailing" secondItem="dri-4n-88K" secondAttribute="trailing" constant="30" id="tXn-0J-vuW"/>
                             <constraint firstItem="1KZ-ky-CTb" firstAttribute="top" secondItem="dri-4n-88K" secondAttribute="bottom" constant="20" id="vac-ME-qS9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X2E-Yu-9sG"/>
                     </view>
                     <connections>
-                        <outlet property="image" destination="dri-4n-88K" id="zlV-1P-9Cf"/>
-                        <outlet property="labelBreed" destination="aO6-aK-Nsv" id="l7W-dt-1hL"/>
-                        <outlet property="labelBreedGroup" destination="Bxs-t4-9WX" id="KMq-qv-bk2"/>
-                        <outlet property="labelHeigth" destination="9m1-zO-CbW" id="6NF-W7-zTE"/>
-                        <outlet property="labelLife_span" destination="pfw-Jg-Bjt" id="cZw-Bb-88E"/>
-                        <outlet property="labelNoBreed" destination="lqo-4R-Q5z" id="oc2-RT-gza"/>
-                        <outlet property="labelWeigth" destination="H9U-uN-KNm" id="n4k-Tu-CZa"/>
-                        <outlet property="stackView" destination="1KZ-ky-CTb" id="PJp-IX-4Ce"/>
+                        <outlet property="image" destination="dri-4n-88K" id="dBU-XK-1zm"/>
+                        <outlet property="labelBreed" destination="aO6-aK-Nsv" id="D8T-Vy-4hp"/>
+                        <outlet property="labelBreedGroup" destination="Bxs-t4-9WX" id="YGf-9d-qgU"/>
+                        <outlet property="labelHeigth" destination="9m1-zO-CbW" id="tSU-IJ-kbD"/>
+                        <outlet property="labelLife_span" destination="pfw-Jg-Bjt" id="XTA-Zo-4Yh"/>
+                        <outlet property="labelWeigth" destination="H9U-uN-KNm" id="IiC-69-MzN"/>
+                        <outlet property="stackView" destination="1KZ-ky-CTb" id="rJl-Wa-pBs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIn-3t-QQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2372" y="-339.58020989505252"/>
+            <point key="canvasLocation" x="2423" y="102"/>
         </scene>
         <!--Cachorros-->
         <scene sceneID="wg7-f3-ORb">
@@ -202,7 +188,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dogsCell" id="YGS-5g-2ji" customClass="DogsCollectionViewCell" customModule="TestNuvemShop" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="YGS-5g-2ji" customClass="AnimalsCollectionViewCell" customModule="TestNuvemShop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="105"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -252,7 +238,7 @@
                     <navigationItem key="navigationItem" title="Dogs" id="OAS-8g-iZT"/>
                     <connections>
                         <outlet property="collectionView" destination="Oxz-oU-knW" id="h3a-9S-ZgX"/>
-                        <segue destination="EXt-jf-cnb" kind="show" identifier="dogsDetails" id="IEC-Vt-pfc"/>
+                        <segue destination="DnO-Ih-wBJ" kind="show" identifier="dogsDetail" id="PW3-tP-T6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -328,101 +314,12 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
-        <!--Details of Dog-->
-        <scene sceneID="t1Z-sE-ARX">
-            <objects>
-                <viewController title="Details of Dog" id="EXt-jf-cnb" customClass="DetailsOfDogsViewController" customModule="TestNuvemShop" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RNu-Ys-JNv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBs-KL-JQX">
-                                <rect key="frame" x="30" y="84" width="315" height="220"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="krP-YQ-9nV"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Undefined Breed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNz-IZ-pl9">
-                                <rect key="frame" x="30" y="324" width="315" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="URe-jJ-Gzy"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="bd8-rJ-nXO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qZc-FP-juj">
-                                <rect key="frame" x="30" y="324" width="315" height="140"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qad-Ql-Z7C">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weigth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkc-cQ-ExC">
-                                        <rect key="frame" x="0.0" y="29" width="315" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="heigth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULP-D8-wUQ">
-                                        <rect key="frame" x="0.0" y="58" width="315" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="life span" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvj-qR-XDd">
-                                        <rect key="frame" x="0.0" y="87" width="315" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9w-vF-c00">
-                                        <rect key="frame" x="0.0" y="116" width="315" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <color key="textColor" red="0.031372549020000001" green="0.14901960780000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Jv3-Dq-QXE"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="hEp-A9-4mX" firstAttribute="trailing" secondItem="qZc-FP-juj" secondAttribute="trailing" constant="30" id="Gfa-Dt-omI"/>
-                            <constraint firstItem="rBs-KL-JQX" firstAttribute="leading" secondItem="hEp-A9-4mX" secondAttribute="leading" constant="30" id="IDf-HI-0XC"/>
-                            <constraint firstItem="RNz-IZ-pl9" firstAttribute="leading" secondItem="hEp-A9-4mX" secondAttribute="leading" constant="30" id="VGq-3e-Gh9"/>
-                            <constraint firstItem="qZc-FP-juj" firstAttribute="top" secondItem="rBs-KL-JQX" secondAttribute="bottom" constant="20" id="Wun-n7-38X"/>
-                            <constraint firstItem="RNz-IZ-pl9" firstAttribute="top" secondItem="rBs-KL-JQX" secondAttribute="bottom" constant="20" id="ccN-tE-FSr"/>
-                            <constraint firstItem="hEp-A9-4mX" firstAttribute="trailing" secondItem="rBs-KL-JQX" secondAttribute="trailing" constant="30" id="dOY-rJ-oPZ"/>
-                            <constraint firstItem="rBs-KL-JQX" firstAttribute="top" secondItem="RNu-Ys-JNv" secondAttribute="topMargin" constant="20" id="dYW-C3-PJP"/>
-                            <constraint firstItem="qZc-FP-juj" firstAttribute="leading" secondItem="hEp-A9-4mX" secondAttribute="leading" constant="30" id="jiC-tH-bdi"/>
-                            <constraint firstItem="hEp-A9-4mX" firstAttribute="trailing" secondItem="RNz-IZ-pl9" secondAttribute="trailing" constant="30" id="x3R-4F-TVC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="hEp-A9-4mX"/>
-                    </view>
-                    <connections>
-                        <outlet property="image" destination="rBs-KL-JQX" id="idw-KW-Hbl"/>
-                        <outlet property="labelBreed" destination="Qad-Ql-Z7C" id="L9I-iE-Zp7"/>
-                        <outlet property="labelBreedGroup" destination="g9w-vF-c00" id="FFV-bR-FAD"/>
-                        <outlet property="labelHeigth" destination="ULP-D8-wUQ" id="gfB-0f-arX"/>
-                        <outlet property="labelLife_span" destination="gvj-qR-XDd" id="phv-2U-NsE"/>
-                        <outlet property="labelNoBreed" destination="RNz-IZ-pl9" id="pZW-DV-HD7"/>
-                        <outlet property="labelWeigth" destination="Gkc-cQ-ExC" id="Te0-11-2uA"/>
-                        <outlet property="stackView" destination="qZc-FP-juj" id="QXH-MJ-Wmc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wmu-ba-FeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2372" y="359"/>
-        </scene>
     </scenes>
     <resources>
         <image name="cat" width="25" height="25"/>
         <image name="dog" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="18a-bX-d4h"/>
+    </inferredMetricsTieBreakers>
 </document>

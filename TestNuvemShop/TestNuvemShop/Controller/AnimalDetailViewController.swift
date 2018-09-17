@@ -1,5 +1,5 @@
 //
-//  DetailsDogsViewController.swift
+//  AnimalDetailViewController.swift
 //  TestNuvemShop
 //
 //  Created by Antonio Queiroz on 13/09/2018.
@@ -9,12 +9,11 @@
 import UIKit
 import Kingfisher
 
-class DetailsOfDogsViewController: UIViewController {
+class AnimalDetailViewController: UIViewController {
     var urlStringImage : String? = ""
     var stringBreeds : String? = ""
     var breed : Breed?
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var labelNoBreed: UILabel!
     @IBOutlet weak var labelBreed: UILabel!
     @IBOutlet weak var labelWeigth: UILabel!
     @IBOutlet weak var labelHeigth: UILabel!
@@ -25,19 +24,11 @@ class DetailsOfDogsViewController: UIViewController {
         super.viewDidLoad()
         let url = URL(string:urlStringImage!)
         self.image.kf.setImage(with: url)
-        if (breed != nil ){
-            self.stackView.isHidden = false
-            self.labelNoBreed.isHidden = true
-            self.labelBreed.text = ("Breed - \(breed?.name ?? "")")
-            self.labelHeigth.text = ("Heigth - \(breed?.heigthMetric ?? "")")
-            self.labelWeigth.text = ("Weigth - \(breed?.weigthMetric ?? "")")
-            self.labelBreedGroup.text = ("Breed Group - \(breed?.breed_group ?? "")")
-            self.labelLife_span.text = ("Life Span - \(breed?.name ?? "")")
-        }else{
-            self.stackView.isHidden = true
-            self.labelNoBreed.isHidden = false
-            self.labelNoBreed.text = "Undefined Breed"
-        }
+        self.labelBreed.text = ("Breed - \(breed?.name ?? "")")
+        self.labelHeigth.text = ("Heigth - \(breed?.heigthMetric ?? "")")
+        self.labelWeigth.text = ("Weigth - \(breed?.weigthMetric ?? "")")
+        self.labelBreedGroup.text = ("Breed Group - \(breed?.breed_group ?? "")")
+        self.labelLife_span.text = ("Life Span - \(breed?.name ?? "")")
     }
     
     override func didReceiveMemoryWarning() {

@@ -1,5 +1,5 @@
 //
-//  Cat.swift
+//  Animal.swift
 //  TestNuvemShop
 //
 //  Created by Antonio Queiroz on 11/09/2018.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Cat{
+class Animal{
     var imageUrl : String
     var breeds: [Breed] = []
     

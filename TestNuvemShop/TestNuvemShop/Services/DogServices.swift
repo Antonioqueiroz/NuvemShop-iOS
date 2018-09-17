@@ -14,7 +14,7 @@ import SwiftyJSON
 class DogServices{
     var BaseUrlDogs : String = "https://api.thedogapi.com/v1/images/search/?limit=50"
     
-    func getDogs(completion: @escaping (_ result: RequestResult<[Dog]>)-> Void){
+    func getDogs(completion: @escaping (_ result: RequestResult<[Animal]>)-> Void){
         if let url = URL(string: BaseUrlDogs) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
@@ -26,10 +26,10 @@ class DogServices{
                 if let result = response.result.value {
                     let json = JSON(result)
                     print("Response:\(json)")
-                    var listDogs = [Dog]()
+                    var listDogs = [Animal]()
                     let dogs = json.arrayValue
                     for dog in dogs{
-                        let data = Dog(withJson: dog)
+                        let data = Animal(withJson: dog)
                         listDogs.append(data)
                     }
                     completion(RequestResult.done(listDogs))

@@ -11,34 +11,34 @@ import MBProgressHUD
 import Kingfisher
 import SCLAlertView
 
-class ListTheCatsViewController: UIViewController {
+class ListTheDogsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var presenter : ListCatsPresenter = ListCatsPresenter()
-    var cats : [Cat] = [Cat]()
+    var presenter : ListAnimalsPresenter = ListAnimalsPresenter()
+    var dogs : [Animal] = [Animal]()
     var imageUrlSelected : String = ""
     var breedSelected : Breed?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.showInView(view: self)
-        presenter.getCats()
+        presenter.getDogs()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! DetailsOfCatsViewController
+        let vc = segue.destination as! AnimalDetailViewController
         vc.urlStringImage = self.imageUrlSelected
         vc.breed = self.breedSelected
     }
 }
 
-extension ListTheCatsViewController : ListCatsView {
-    func showListCats(listCats: [Cat]) {
-        self.cats = listCats
-        self.collectionView .reloadData()
+extension ListTheDogsViewController : ListAnimalsView {
+    func showListAnimals(listAnimals: [Animal]) {
+        self.dogs = listAnimals
+        self.collectionView.reloadData()
     }
     
     func showLoadingWithMessage(message: String) {
@@ -56,33 +56,33 @@ extension ListTheCatsViewController : ListCatsView {
     }
 }
 
-extension ListTheCatsViewController : UICollectionViewDataSource{
+extension ListTheDogsViewController : UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cats.count
+        return self.dogs.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "catsCell", for: indexPath) as! CatsCollectionViewCell
-        let url = URL(string: self.cats[indexPath.row].imageUrl)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! AnimalsCollectionViewCell
+        let url = URL(string: self.dogs[indexPath.row].imageUrl)    
         cell.image.kf.setImage(with: url)
         return cell
     }
 }
 
-extension ListTheCatsViewController : UICollectionViewDelegate{
+extension ListTheDogsViewController : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cat = self.cats[indexPath.row]
-        self.imageUrlSelected = cat.imageUrl
-        if (!cat.breeds.isEmpty){
-            self.breedSelected = cat.breeds.first!
+        let dog = self.dogs[indexPath.row]
+        self.imageUrlSelected = dog.imageUrl
+        if (!dog.breeds.isEmpty){
+            self.breedSelected = dog.breeds.first!
+             self.performSegue(withIdentifier: "dogsDetail", sender: self)
         }else{
             self.breedSelected = nil
         }
-        self.performSegue(withIdentifier: "catsDetails", sender: self)
     }
 }
 

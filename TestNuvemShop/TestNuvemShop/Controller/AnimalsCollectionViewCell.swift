@@ -1,15 +1,14 @@
 //
-//  CatsCollectionViewCell.swift
+//  AnimalsCollectionViewCell.swift
 //  TestNuvemShop
 //
-//  Created by Antonio Queiroz on 12/09/2018.
+//  Created by Antonio Queiroz on 13/09/2018.
 //  Copyright © 2018 Antonio Queiroz. All rights reserved.
 //
 
 import UIKit
 
-class CatsCollectionViewCell: UICollectionViewCell {
-
+class AnimalsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +22,5 @@ class CatsCollectionViewCell: UICollectionViewCell {
     static var identifier: String {
         return String(describing: self)
     }
-
+    
 }
